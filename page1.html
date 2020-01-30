@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<title>Contenido de la Unidad</title>
+</head>
+<body>
+	<div class="container">
+	<div class="card border">
+	<div class="card-body">
+
+		<center><h2 id="intro">INTRODUCCIÓN</h2></center>
+		<div style="width:800px; margin:auto;">
+			<h3><strong>Modelos de Datos:</strong></h3>
+			<p align="justify">En el diseño de bases de datos se usan primero los modelos conceptuales para lograr una descripción de alto nivel de la realidad, y luego se transforma el esquema conceptual en un esquema lógico. El motivo para realizar estas dos etapas es la dificultad de abstraer la estructura de una base de datos que presente cierta complejidad.</p>
+			<p>Los modelos conceptuales deben ser buenas herramientas para representar la realidad, por lo que deben poseer las siguientes cualidades:</p>
+			<p>
+				<ul>
+					<li><strong>Expresividad:</strong> deben tener suficientes conceptos para expresar perfectamente la realidad.</li>
+					<li><strong>Simplicidad:</strong> deben ser simples para que los esquemas sean fáciles de entender.</li>
+					<li><strong>Minimalidad:</strong> cada concepto debe tener un significado distinto.</li>
+					<li><strong>Formalidad:</strong> todos los conceptos deben tener una interpretación única, precisa y bien definida.</li>
+				</ul>
+			</p>
+			<br>
+			<center><h2 id="modelo">MODELO ENTIDAD RELACION (E-R)</h2></center>
+			<p align="justify">
+				<strong>El modelo entidad - relación</strong> fue introducido por Peter Chen en 1976. Está formado por un conjunto de conceptos que permiten describir la realidad mediante un conjunto de representaciones gráficas y lingüísticas. Originalmente, el modelo entidad - relación sólo incluía los conceptos de entidad, relación y atributo. Más tarde, se añadieron otros conceptos, como los atributos compuestos y las jerarquías de generalización, en lo que se ha denominado modelo entidad - relación extendido. 
+			</p>
+			<hr>
+			<center><h2>COMPONENTES DEL MODELO E-R</h2></center><br>
+			<center><img src="images/simbolos.jpg"></center>
+			<hr>
+			<h3 id="entidad"><strong>Entidad</strong><br></h3>
+			<center><img src="images/entidad.jpg"></center>
+			<p align="justify">			
+				Una entidad es cualquier tipo de objeto o concepto sobre el que se recoge información: cosa, persona, concepto abstracto o suceso. Por ejemplo: coches, casas, empleados, clientes, empresas, oficios, diseños de productos, conciertos, excursiones, etc. Las entidades se representan gráficamente mediante rectángulos y su nombre aparece en el interior. Un nombre de entidad sólo puede aparecer una vez en el esquema conceptual. 
+				<br>
+				Hay dos tipos de entidades: fuertes y débiles. Una entidad débil es una entidad cuya existencia depende de la existencia de otra entidad. Una entidad fuerte es una entidad que no es débil.
+			</p><br>
+
+			<h3 id="conjunto_entidad"><strong>Conjunto de Entidades</strong><br></h3>
+			<p align="justify">
+				
+				Una <strong>súper clave</strong> es un conjunto de uno o más atributos que, tomados colectivamente, permiten identificar de forma única una entidad en el conjunto de entidades, por ejemplo, el atributo id-cliente del conjunto de entidades cliente es suficiente para distinguir una entidad. Cliente de otras. Así id-cliente es una súper clave, análogamente la combinación de nombrecliente e id-cliente es una súper clave del conjunto de entidades cliente. El atributo nombrecliente no es una súper clave por que varias personas podrían tener el mismo nombre.<br>
+				Se usara el termino <strong>clave primaria</strong> para denotar una clave candidata que es elegida por el diseñador de la base de datos como elemento principal para identificar las entidades dentro de un conjunto de entidades. Cuales quiera dos entidades individuales no pueden tener el mismo valor en sus atributos claves al mismo tiempo, la designación de una clave representa una restricción en el desarrollo del mundo real que modela.
+
+			</p><br>
+			<h3 id="tipos_entidad"><strong>Tipos de Entidades Débiles</strong><br></h3>
+			<p align="justify">			
+				Una <strong>súper clave</strong> es un conjunto de uno o más atributos que, tomados colectivamente, permiten identificar de forma única una entidad en el conjunto de entidades, por ejemplo, el atributo id-cliente del conjunto de entidades cliente es suficiente para distinguir una entidad. Cliente de otras. Así id-cliente es una súper clave, análogamente la combinación de nombrecliente e id-cliente es una súper clave del conjunto de entidades cliente. El atributo nombrecliente no es una súper clave por que varias personas podrían tener el mismo nombre.<br>
+				Se usara el termino <strong>clave primaria</strong> para denotar una clave candidata que es elegida por el diseñador de la base de datos como elemento principal para identificar las entidades dentro de un conjunto de entidades. Cuales quiera dos entidades individuales no pueden tener el mismo valor en sus atributos claves al mismo tiempo, la designación de una clave representa una restricción en el desarrollo del mundo real que modela.
+
+			</p><br>
+
+			<h3 id="claves"><strong>Claves</strong><br></h3>
+			<center><img src="images/claves.png"></center>
+			<p align="justify">			
+				Se hace necesario tener una forma de especificar como las entidades dentro de un conjunto de entidades dado ya las relaciones dentro de un conjunto de relaciones dado son distinguibles. Conceptualmente las entidades y relaciones individuales son distintas; desde una perspectiva de base de datos, sin embargo, la diferencia entre ellas se debe expresar en término de sus atributos.<br>
+				Por lo tanto, los valores de los atributos de una entidad deben ser tales que permitan unívocamente a la entidad, en otras palabras, no se permite ningún par de entidades que tenga exactamente los mismos valores de sus atributos.<br>
+				Una clave permite identificar un conjunto de atributos suficientes para distinguir entidades entre sí. Las claves también ayudan a identificar unívocamente las relaciones y así distinguir relaciones entre sí.
+
+			</p><br>
+
+			<h3 id="relacion"><strong>Relación (Interrelación)</strong><br></h3>
+			<p align="justify">	
+
+				Es una correspondencia o asociación entre dos o más entidades. Cada relación tiene un nombre que describe su función. Las relaciones se representan gráficamente mediante cuadrados con los ángulos curvos y su nombre aparece en el interior.<br> 
+				Las entidades que están involucradas en una determinada relación se denominan entidades participantes. El número de participantes en una relación es lo que se denomina grado de la relación. Por lo tanto, una relación en la que participan dos entidades es una relación binaria; si son tres las entidades participantes, la relación es ternaria; etc. <br>
+				La cardinalidad con la que una entidad participa en una relación específica es el número mínimo y el número máximo de correspondencias en las que puede tomar.
+				A veces, surgen problemas cuando se está diseñando un esquema conceptual. Estos problemas, denominados trampas, suelen producirse a causa de una mala interpretación en el significado de alguna relación, por lo que es importante comprobar que el esquema conceptual carece de dichas trampas. En general, para encontrar las trampas, hay que asegurarse de que se entiende completamente el significado de cada relación. Si no se entienden las relaciones, se puede crear un esquema que no represente fielmente la realidad. 
+				Una de las trampas que pueden encontrarse ocurre cuando el esquema representa una relación entre entidades, pero el camino entre algunas de sus ocurrencias es ambiguo. El modo de resolverla es reestructurando el esquema para representar la asociación entre las entidades correctamente. 
+				Otra de las trampas sucede cuando un esquema sugiere la existencia de una relación entre entidades, pero el camino entre una y otra no existe para algunas de sus ocurrencias. En este caso, se produce una pérdida de información que se puede subsanar introduciendo la relación que sugería el esquema y que no estaba representada.
+			</p><br>
+
+			<h3 id="atributos"><strong>Atributos</strong><br></h3>
+			<img src="images/atributos.jpg">
+			<p align="justify">			
+				Los atributos representan las propiedades básicas de las entidades y de las relaciones. Toda la información extensiva es portada por los atributos. Gráficamente, se representan mediante el texto descriptivo dentro de las entidades o relaciones a las que pertenecen.<br>
+				Cada atributo tiene un conjunto de valores asociados denominado dominio. El dominio define todos los valores posibles que puede tomar un atributo. Puede haber varios atributos definidos sobre un mismo dominio. Los atributos pueden ser simples o compuestos. Un atributo simple es un atributo que tiene un solo componente, que no se puede dividir en partes más pequeñas que tengan un significado propio. Un atributo compuesto es un atributo con varios componentes, cada uno con un significado por sí mismo. Un grupo de atributos se representa mediante un atributo compuesto cuando tienen afinidad en cuanto a su significado, o en cuanto a su uso. <br>
+				Los atributos también pueden clasificarse en monovalentes o polivalentes. Un atributo monovalente es aquel que tiene un solo valor para cada ocurrencia de la entidad o relación a la que pertenece. Un atributo polivalente es aquel que tiene varios valores para cada ocurrencia de la entidad o relación a la que pertenece. A estos atributos también se les denomina multivaluados, y pueden tener un número máximo y un número mínimo de valores. La cardinalidad de un atributo indica el número mínimo y el número máximo de valores que puede tomar para cada ocurrencia de la entidad o relación a la que pertenece.
+
+			</p><br>
+
+			<h3 id="jerarquia"><strong>Jerarequía de Generalización</strong><br></h3>
+			<p align="justify">			
+				Una entidad E es una generalización de un grupo de entidades E, E, ... E, si cada ocurrencia de cada una de esas entidades es también una ocurrencia de E. Todas las propiedades de la entidad genérica E son heredadas por las subentidades. 
+				Cada jerarquía es total o parcial, y exclusiva o superpuesta. Una jerarquía es total si cada ocurrencia de la entidad genérica corresponde al menos con una ocurrencia de alguna subentidad. Es parcial si existe alguna ocurrencia de la entidad genérica que no corresponde con ninguna ocurrencia de ninguna subentidad.<br>
+				Una jerarquía es exclusiva si cada ocurrencia de la entidad genérica corresponde, como mucho, con una ocurrencia de una sola de las subentidades. Es superpuesta si existe alguna ocurrencia de la entidad genérica que corresponde a ocurrencias de dos o más subentidades diferentes.<br>
+				Un subconjunto es un caso particular de generalización con una sola entidad como subentidad. Un subconjunto siempre es una jerarquía parcial y exclusiva.
+
+			</p><br>
+		   </div>
+		</div>
+		</div>
+	</div>
+</body>
+</html>
